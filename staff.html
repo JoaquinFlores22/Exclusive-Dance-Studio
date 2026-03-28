@@ -29,29 +29,23 @@
     <ul class="hidden lg:flex space-x-8 text-gray-600 font-semibold text-sm uppercase tracking-widest">
       <li><a href="index.html" class="hover:text-[#C5A059] transition">Inicio</a></li>
       <li><a href="clases.html" class="hover:text-[#C5A059] transition">Clases</a></li>
-      <li><a href="staff.html" class="hover:text-[#C5A059] transition">Staff</a></li>
-      <li><a href="contacto.html" class="text-black border-b-2 border-[#C5A059]">Contacto</a></li>
+      <li><a href="staff.html" class="text-black border-b-2 border-[#C5A059]">Staff</a></li>
+      <li><a href="contacto.html" class="hover:text-[#C5A059] transition">Contacto</a></li>
     </ul>
 
-    <button id="menu-btn" class="lg:hidden text-black p-2 focus:outline-none" aria-label="Menu">
-      <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button id="menu-btn" class="lg:hidden text-black p-2 focus:outline-none">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
   </nav>
 
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 w-full absolute top-full left-0 shadow-2xl animate-fade-in">
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 w-full absolute top-full left-0 shadow-2xl">
     <div class="flex flex-col p-6 space-y-5 font-bold uppercase tracking-widest text-xs text-center">
-      <a href="index.html" class="text-gray-700 py-2 border-b border-gray-50 active:text-[#C5A059]">Inicio</a>
-      <a href="clases.htmlL" class="text-gray-700 py-2 border-b border-gray-50 active:text-[#C5A059]">Clases</a>
-      <a href="staff.html" class="text-gray-700 py-2 border-b border-gray-50 active:text-[#C5A059]">Staff</a>
-      <a href="contacto.html" class="text-[#C5A059] py-2">Contacto</a>
-      
-      <div class="flex justify-center gap-6 pt-4 border-t border-gray-50">
-        <a href="https://www.instagram.com/dancingwithmiia/" class="text-gray-400 text-[10px]">IG</a>
-        <a href="https://www.tiktok.com/@miaelshami" class="text-gray-400 text-[10px]">TK</a>
-        <a href="https://www.youtube.com/@miaelshami" class="text-gray-400 text-[10px]">YT</a>
-      </div>
+      <a href="index.html" class="text-gray-700">Inicio</a>
+      <a href="clases.html" class="text-gray-700">Clases</a>
+      <a href="staff.html" class="text-[#C5A059]">Staff</a>
+      <a href="contacto.html" class="text-gray-700">Contacto</a>
     </div>
   </div>
 </header>
@@ -67,7 +61,7 @@
   <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
     <div class="staff-card relative group h-[500px] overflow-hidden rounded-[2rem] border border-white/10 fade-in">
-      <img src="mia.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" alt="Profesor">
+      <img src="mia.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" alt="Mía Elshami">
       <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
       
       <div class="absolute inset-0 p-8 flex flex-col justify-end">
@@ -75,10 +69,11 @@
         <h3 class="text-2xl font-black uppercase tracking-tighter mb-4">Mía Elshami</h3>
         
         <div class="staff-info">
-          <p class="text-gray-300 text-xs leading-relaxed mb-6 font-light">Arranqué a los 10 años y la danza se volvió mi vida. Me formé en los estudios más fuertes de Buenos Aires como Urbano Studio, La Estación y la academia de Reina Reech, donde a los 18 ya empecé a dar mis primeras clases. Gracias al esfuerzo de años, pude viajar a perfeccionarme a las cunas del género Urbano, absorviendo toda la cultura y técnica. Hoy, con 20 años y una década de trayectoria encima, mi propuesta para Exclusive es traer esa mezcla de formación internacional con la fuerza del urbano local, enfocándome en el crecimiento técnico y la identidad de cada alumno." </p>
-         <div class="flex gap-4">
-            <a href="https://www.instagram.com/reel/DQUtSMxDw5t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="text-white text-xs font-bold uppercase tracking-widest border-b border-[#C5A059] pb-1">Ver Reel</a>
-            <a href="https://www.instagram.com/mia.elshami/" class="text-[#C5A059] text-xs font-bold uppercase tracking-widest pb-1">Instagram</a>
+          <p class="text-gray-300 text-xs leading-relaxed mb-6 font-light">
+            Arranqué a los 10 años y la danza se volvió mi vida. Me formé en los estudios más fuertes de Buenos Aires como Urbano Studio, La Estación y la academia de Reina Reech. Mi propuesta es traer esa mezcla de formación internacional con la fuerza del urbano local.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/dancingwithmiia/" target="_blank" class="text-[#C5A059] text-xs font-bold uppercase tracking-widest border-b border-[#C5A059] pb-1">Instagram</a>
           </div>
         </div>
       </div>
@@ -91,13 +86,8 @@
       <div class="absolute inset-0 p-8 flex flex-col justify-end">
         <span class="text-[#C5A059] font-bold text-[10px] uppercase tracking-[0.3em] mb-2">Contemporáneo / Jazz</span>
         <h3 class="text-2xl font-black uppercase tracking-tighter mb-4">Juan Pérez</h3>
-        
         <div class="staff-info">
           <p class="text-gray-300 text-xs leading-relaxed mb-6 font-light">Coreógrafo profesional enfocado en la técnica y la expresión corporal. Sus clases son un viaje de fluidez y fuerza.</p>
-          <div class="flex gap-4">
-            <a href="#" class="text-white text-xs font-bold uppercase tracking-widest border-b border-[#C5A059] pb-1">Ver Reel</a>
-            <a href="#" class="text-[#C5A059] text-xs font-bold uppercase tracking-widest pb-1">Instagram</a>
-          </div>
         </div>
       </div>
     </div>
@@ -109,13 +99,8 @@
       <div class="absolute inset-0 p-8 flex flex-col justify-end">
         <span class="text-[#C5A059] font-bold text-[10px] uppercase tracking-[0.3em] mb-2">Hip-Hop / Breaking</span>
         <h3 class="text-2xl font-black uppercase tracking-tighter mb-4">Santi King</h3>
-        
         <div class="staff-info">
-          <p class="text-gray-300 text-xs leading-relaxed mb-6 font-light">Referente de la cultura urbana en Argentina. Sus clases combinan la vieja escuela con los estilos más actuales del freestyle.</p>
-          <div class="flex gap-4">
-            <a href="https://www.instagram.com/reel/DQUtSMxDw5t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="text-white text-xs font-bold uppercase tracking-widest border-b border-[#C5A059] pb-1">Ver Reel</a>
-            <a href="https://www.instagram.com/mia.elshami/" class="text-[#C5A059] text-xs font-bold uppercase tracking-widest pb-1">Instagram</a>
-          </div>
+          <p class="text-gray-300 text-xs leading-relaxed mb-6 font-light">Referente de la cultura urbana en Argentina. Sus clases combinan la vieja escuela con los estilos más actuales.</p>
         </div>
       </div>
     </div>
@@ -138,47 +123,29 @@
         Exclusive <span class="text-[#C5A059]">Dance</span> Studio
       </div>
       <p class="text-white/70 text-sm leading-relaxed">
-        Elevando el arte del movimiento con elegancia y profesionalismo. Tu lugar para brillar está aquí.
+        Elevando el arte del movimiento con elegancia y profesionalismo.
       </p>
     </div>
     <div>
       <h4 class="text-[#F3E5AB] font-bold uppercase text-xs tracking-[0.2em] mb-6">Explorar</h4>
       <ul class="space-y-3 text-sm text-white/80">
-        <li><a href="index.html" class="hover:text-[#C5A059] transition">Inicio</a></li>
-        <li><a href="clases.html" class="hover:text-[#C5A059] transition">Clases</a></li>
-        <li><a href="staff.html" class="hover:text-[#C5A059] transition">Staff</a></li>
-        <li><a href="unite.html" class="hover:text-[#C5A059] transition">Trabaja con nosotros</a></li>
+        <li><a href="index.html" class="hover:text-[#C5A059]">Inicio</a></li>
+        <li><a href="clases.html" class="hover:text-[#C5A059]">Clases</a></li>
+        <li><a href="staff.html" class="hover:text-[#C5A059]">Staff</a></li>
+        <li><a href="unite.html" class="hover:text-[#C5A059]">Trabajá con nosotros</a></li>
       </ul>
     </div>
     </div>
-    <div>
-      <h4 class="text-[#F3E5AB] font-bold uppercase text-xs tracking-[0.2em] mb-6">Contacto</h4>
-      <ul class="space-y-3 text-sm text-white/80">
-        <li>📞 +54 9 11 2584-0413</li>
-        <li>✉️ exclusive.dance.info@gmail.com</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-[#F3E5AB] font-bold uppercase text-xs tracking-[0.2em] mb-6">Seguinos</h4>
-      <div class="flex justify-center md:justify-start gap-4">
-        <a href="https://www.instagram.com/dancingwithmiia/" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C5A059] hover:text-[#C5A059] transition text-[10px] font-bold">IG</a>
-        <a href="https://www.tiktok.com/@miaelshami" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C5A059] hover:text-[#C5A059] transition text-[10px] font-bold">TK</a>
-        <a href="https://www.youtube.com/@miaelshami" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C5A059] hover:text-[#C5A059] transition text-[10px] font-bold">YT</a>
-      </div>
-    </div>
+  <div class="text-center text-[10px] text-white/30 mt-10">
+    © 2026 Exclusive Dance Studio - Desarrollado por Joaquín Flores
   </div>
-  <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-center text-xs text-white/50 tracking-widest uppercase">
-    <p> © 2026 Sociedades360. Todos los derechos reservados. <br> Desarrollado por <em class="text-[#C5A059]">@desarrollo_by joaquin flores</em></p>
-  </div>
-</footer>       
+</footer>           
 
 <script>
-  // Menú Hamburguesa
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
   btn.onclick = () => menu.classList.toggle('hidden');
 
-  // Fade in scroll
   const elements = document.querySelectorAll('.fade-in');
   const show = () => {
     elements.forEach(el => {
