@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff - Exclusive Dance Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+    .visible { opacity: 1; transform: translateY(0); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #111; }
+    ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 10px; }
+    
+    /* Efecto de revelado para la info del profesor */
+    .staff-card:hover .staff-info { transform: translateY(0); opacity: 1; }
+    .staff-info { transform: translateY(20px); opacity: 0; transition: all 0.5s ease; }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white bg-cover bg-center bg-fixed" style="background-image: url('marmol-negro.jpg');">
+
+<header class="fixed top-0 left-0 w-full z-[100] bg-white/90 backdrop-blur-md shadow-lg">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-4">
+    <div class="text-base md:text-xl font-bold tracking-tighter text-gray-900 uppercase flex-shrink-0">
+      Exclusive <span class="text-[#C5A059]">Dance</span> Studio
+    </div>
+
+    <ul class="hidden lg:flex space-x-8 text-gray-600 font-semibold text-sm uppercase tracking-widest">
+      <li><a href="INDEX.HTML" class="hover:text-[#C5A059] transition">Inicio</a></li>
+      <li><a href="CLASES.HTML" class="hover:text-[#C5A059] transition">Clases</a></li>
+      <li><a href="STAFF.HTML" class="hover:text-[#C5A059] transition">Staff</a></li>
+      <li><a href="CONTACTO.HTML" class="text-black border-b-2 border-[#C5A059]">Contacto</a></li>
+    </ul>
+
+    <button id="menu-btn" class="lg:hidden text-black p-2 focus:outline-none" aria-label="Menu">
+      <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 w-full absolute top-full left-0 shadow-2xl animate-fade-in">
+    <div class="flex flex-col p-6 space-y-5 font-bold uppercase tracking-widest text-xs text-center">
+      <a href="INDEX.HTML" class="text-gray-700 py-2 border-b border-gray-50 active:text-[#C5A059]">Inicio</a>
+      <a href="CLASES.HTML" class="text-gray-700 py-2 border-b border-gray-50 active:text-[#C5A059]">Clases</a>
+      <a href="STAFF.HTML" class="text-gray-700 py-2 border-b border-gray-50 active:text-[#C5A059]">Staff</a>
+      <a href="CONTACTO.HTML" class="text-[#C5A059] py-2">Contacto</a>
+      
+      <div class="flex justify-center gap-6 pt-4 border-t border-gray-50">
+        <a href="https://www.instagram.com/dancingwithmiia/" class="text-gray-400 text-[10px]">IG</a>
+        <a href="https://www.tiktok.com/@miaelshami" class="text-gray-400 text-[10px]">TK</a>
+        <a href="https://www.youtube.com/@miaelshami" class="text-gray-400 text-[10px]">YT</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="bg-black/60 min-h-screen pt-32 pb-20">
+  
+  <section class="text-center px-6 mb-16 fade-in">
+    <span class="text-[#C5A059] uppercase tracking-[0.5em] text-[10px] font-bold mb-2 block">El alma del estudio</span>
+    <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">Nuestro <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#F3E5AB]">Staff</span></h1>
+    <div class="w-20 h-1 bg-[#C5A059] mx-auto mt-6"></div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <div class="staff-card relative group h-[500px] overflow-hidden rounded-[2rem] border border-white/10 fade-in">
+      <img src="mia.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" alt="Profesor">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+      
+      <div class="absolute inset-0 p-8 flex flex-col justify-end">
+        <span class="text-[#C5A059] font-bold text-[10px] uppercase tracking-[0.3em] mb-2">Directora / Urbana</span>
+        <h3 class="text-2xl font-black uppercase tracking-tighter mb-4">Mía Elshami</h3>
+        
+        <div class="staff-info">
+          <p class="text-gray-300 text-xs leading-relaxed mb-6 font-light">Arranqué a los 10 años y la danza se volvió mi vida. Me formé en los estudios más fuertes de Buenos Aires como Urbano Studio, La Estación y la academia de Reina Reech, donde a los 18 ya empecé a dar mis primeras clases. Gracias al esfuerzo de años, pude viajar a perfeccionarme a las cunas del género Urbano, absorviendo toda la cultura y técnica. Hoy, con 20 años y una década de trayectoria encima, mi propuesta para Exclusive es traer esa mezcla de formación internacional con la fuerza del urbano local, enfocándome en el crecimiento técnico y la identidad de cada alumno." </p>
+         <div class="flex gap-4">
+            <a href="https://www.instagram.com/reel/DQUtSMxDw5t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="text-white text-xs font-bold uppercase tracking-widest border-b border-[#C5A059] pb-1">Ver Reel</a>
+            <a href="https://www.instagram.com/mia.elshami/" class="text-[#C5A059] text-xs font-bold uppercase tracking-widest pb-1">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card relative group h-[500px] overflow-hidden rounded-[2rem] border border-white/10 fade-in">
+      <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" alt="Profesor">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+      
+      <div class="absolute inset-0 p-8 flex flex-col justify-end">
+        <span class="text-[#C5A059] font-bold text-[10px] uppercase tracking-[0.3em] mb-2">Contemporáneo / Jazz</span>
+        <h3 class="text-2xl font-black uppercase tracking-tighter mb-4">Juan Pérez</h3>
+        
+        <div class="staff-info">
+          <p class="text-gray-300 text-xs leading-relaxed mb-6 font-light">Coreógrafo profesional enfocado en la técnica y la expresión corporal. Sus clases son un viaje de fluidez y fuerza.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-white text-xs font-bold uppercase tracking-widest border-b border-[#C5A059] pb-1">Ver Reel</a>
+            <a href="#" class="text-[#C5A059] text-xs font-bold uppercase tracking-widest pb-1">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-card relative group h-[500px] overflow-hidden rounded-[2rem] border border-white/10 fade-in">
+      <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f73e?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" alt="Profesor">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+      
+      <div class="absolute inset-0 p-8 flex flex-col justify-end">
+        <span class="text-[#C5A059] font-bold text-[10px] uppercase tracking-[0.3em] mb-2">Hip-Hop / Breaking</span>
+        <h3 class="text-2xl font-black uppercase tracking-tighter mb-4">Santi King</h3>
+        
+        <div class="staff-info">
+          <p class="text-gray-300 text-xs leading-relaxed mb-6 font-light">Referente de la cultura urbana en Argentina. Sus clases combinan la vieja escuela con los estilos más actuales del freestyle.</p>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/reel/DQUtSMxDw5t/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="text-white text-xs font-bold uppercase tracking-widest border-b border-[#C5A059] pb-1">Ver Reel</a>
+            <a href="https://www.instagram.com/mia.elshami/" class="text-[#C5A059] text-xs font-bold uppercase tracking-widest pb-1">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="mt-32 text-center fade-in">
+    <h2 class="text-2xl font-bold uppercase tracking-[0.2em] mb-8">¿Querés formar parte?</h2>
+    <a href="UNITE.HTML" class="bg-white text-black px-12 py-5 rounded-full font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-[#C5A059] hover:text-white transition-all shadow-2xl">
+      Contactanos
+    </a>
+  </section>
+
+</div>
+
+<footer class="relative bg-black/90 backdrop-blur-md border-t border-white/10 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+    <div class="space-y-4">
+      <div class="text-xl font-bold tracking-tighter text-white uppercase">
+        Exclusive <span class="text-[#C5A059]">Dance</span> Studio
+      </div>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Elevando el arte del movimiento con elegancia y profesionalismo. Tu lugar para brillar está aquí.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-[#F3E5AB] font-bold uppercase text-xs tracking-[0.2em] mb-6">Explorar</h4>
+      <ul class="space-y-3 text-sm text-white/80">
+        <li><a href="INDEX.HTML" class="hover:text-[#C5A059] transition">Inicio</a></li>
+        <li><a href="CLASES.HTML" class="hover:text-[#C5A059] transition">Clases</a></li>
+        <li><a href="STAFF.HTML" class="hover:text-[#C5A059] transition">Staff</a></li>
+        <li><a href="UNITE.HTML" class="hover:text-[#C5A059] transition">Trabaja con nosotros</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[#F3E5AB] font-bold uppercase text-xs tracking-[0.2em] mb-6">Contacto</h4>
+      <ul class="space-y-3 text-sm text-white/80">
+        <li>📍 Av. Boedo 1057, CABA</li>
+        <li>📞 +54 9 11 2584-0413</li>
+        <li>✉️ exclusive.dance.info@gmail.com</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[#F3E5AB] font-bold uppercase text-xs tracking-[0.2em] mb-6">Seguinos</h4>
+      <div class="flex justify-center md:justify-start gap-4">
+        <a href="https://www.instagram.com/dancingwithmiia/" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C5A059] hover:text-[#C5A059] transition text-[10px] font-bold">IG</a>
+        <a href="https://www.tiktok.com/@miaelshami" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C5A059] hover:text-[#C5A059] transition text-[10px] font-bold">TK</a>
+        <a href="https://www.youtube.com/@miaelshami" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C5A059] hover:text-[#C5A059] transition text-[10px] font-bold">YT</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-center text-xs text-white/50 tracking-widest uppercase">
+    <p> © 2026 Sociedades360. Todos los derechos reservados. <br> Desarrollado por <em class="text-[#C5A059]">@desarrollo_by joaquin flores</em></p>
+  </div>
+</footer>           
+
+<script>
+  // Menú Hamburguesa
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.onclick = () => menu.classList.toggle('hidden');
+
+  // Fade in scroll
+  const elements = document.querySelectorAll('.fade-in');
+  const show = () => {
+    elements.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('visible');
+    });
+  };
+  window.onscroll = show;
+  window.onload = show;
+</script>
+
+</body>
+</html>

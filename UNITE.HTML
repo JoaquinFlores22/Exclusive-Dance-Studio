@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unite - Exclusive Dance Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; overflow-x: hidden; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+    .visible { opacity: 1; transform: translateY(0); }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #111; }
+    ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 10px; }
+    body { padding-top: 80px; }
+    /* Clase para asegurar que el contenido esté sobre el fondo */
+    .content-overlay { position: relative; z-index: 10; }
+  </style>
+</head>
+<body class="bg-gray-900 text-white bg-cover bg-center bg-fixed" style="background-image: url('marmol-negro.jpg');">
+
+<header class="fixed top-0 left-0 w-full z-[100] bg-white/90 backdrop-blur-md shadow-lg">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-4">
+    <div class="text-base md:text-xl font-bold tracking-tighter text-gray-900 uppercase flex-shrink-0">
+      Exclusive <span class="text-[#C5A059]">Dance</span> Studio
+    </div>
+
+    <ul class="hidden lg:flex space-x-8 text-gray-600 font-semibold text-sm uppercase tracking-widest">
+      <li><a href="INDEX.HTML" class="hover:text-[#C5A059] transition">Inicio</a></li>
+      <li><a href="CLASES.HTML" class="hover:text-[#C5A059] transition">Clases</a></li>
+      <li><a href="STAFF.HTML" class="hover:text-[#C5A059] transition">Staff</a></li>
+      <li><a href="CONTACTO.HTML" class="text-black border-b-2 border-[#C5A059]">Contacto</a></li>
+    </ul>
+
+    <button id="menu-btn" class="lg:hidden text-black p-2 focus:outline-none" aria-label="Menu">
+      <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 w-full absolute top-full left-0 shadow-2xl animate-fade-in">
+    <div class="flex flex-col p-6 space-y-5 font-bold uppercase tracking-widest text-xs text-center">
+      <a href="INDEX.HTML" class="text-gray-700 py-2 border-b border-gray-50 active:text-[#C5A059]">Inicio</a>
+      <a href="CLASES.HTML" class="text-gray-700 py-2 border-b border-gray-50 active:text-[#C5A059]">Clases</a>
+      <a href="STAFF.HTML" class="text-gray-700 py-2 border-b border-gray-50 active:text-[#C5A059]">Staff</a>
+      <a href="CONTACTO.HTML" class="text-[#C5A059] py-2">Contacto</a>
+      
+      <div class="flex justify-center gap-6 pt-4 border-t border-gray-50">
+        <a href="https://www.instagram.com/dancingwithmiia/" class="text-gray-400 text-[10px]">IG</a>
+        <a href="https://www.tiktok.com/@miaelshami" class="text-gray-400 text-[10px]">TK</a>
+        <a href="https://www.youtube.com/@miaelshami" class="text-gray-400 text-[10px]">YT</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="relative min-h-screen pb-20 bg-black/40">
+  <section class="py-20 px-6 text-center content-overlay fade-in">
+    <span class="text-[#C5A059] uppercase tracking-[0.5em] text-[10px] font-bold mb-4 block">Unite a nuestra familia</span>
+    <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white drop-shadow-2xl">Unite a nuestro Staff</h1>
+    <p class="max-w-3xl mx-auto mt-6 text-gray-100 text-sm md:text-base font-medium">Buscamos instructores profesionales para nuestras sedes de Boedo, Almagro y Lanús.</p>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 content-overlay fade-in">
+    <div class="bg-white rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.5)] p-8 md:p-12 text-black border border-gray-100">
+      <h2 class="text-2xl md:text-3xl font-bold mb-10 text-center text-gray-900">Formulario de Postulación</h2>
+      
+      <form id="unite-form" class="space-y-6">
+        <input type="hidden" name="time" id="time_hidden">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-gray-700 ml-1">Nombre Completo</label>
+            <input type="text" name="nombre" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none focus:ring-4 focus:ring-[#C5A059]/10 transition-all" placeholder="Tu nombre artístico" required>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-gray-700 ml-1">Instagram</label>
+            <div class="relative">
+              <span class="absolute left-4 top-3.5 text-gray-400 font-bold">@</span>
+              <input type="text" name="instagram" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 pl-10 pr-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none focus:ring-4 focus:ring-[#C5A059]/10 transition-all" placeholder="usuario" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-gray-700 ml-1">Correo Electrónico</label>
+            <input type="email" name="email" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none transition-all" placeholder="tu@email.com" required>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-gray-700 ml-1">Número de Teléfono</label>
+            <input type="tel" name="telefono" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none transition-all" placeholder="+54 9 11 ..." required>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-gray-700 ml-1">Sede de interés</label>
+            <select name="sede" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none transition-all" required>
+              <option value="">Seleccioná una sede</option>
+              <option value="Boedo">Boedo</option>
+              <option value="Almagro">Almagro</option>
+              <option value="Lanús">Lanús</option>
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-gray-700 ml-1">Especialidad</label>
+            <select name="especialidad" id="especialidad" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none transition-all" required>
+              <option value="">Seleccioná especialidad</option>
+              <option value="Urbano">Urbano</option>
+              <option value="Contemporáneo">Contemporáneo</option>
+              <option value="Jazz">Jazz</option>
+              <option value="Hip-Hop">Hip-Hop</option>
+              <option value="Ballet">Ballet</option>
+              <option value="Otra">Otra (Especificar)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="otra-especialidad-container" class="hidden space-y-2 animate-pulse">
+            <label class="text-sm font-bold text-[#C5A059]">¿Cuál es tu especialidad?</label>
+            <input type="text" name="otra_especialidad_detalle" id="otra_especialidad_detalle" class="w-full rounded-2xl border-2 border-[#C5A059]/30 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none transition-all" placeholder="Ej: Tango, Salsa, etc.">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label class="text-sm font-bold text-gray-700 ml-1">¿Contás con alumnos?</label>
+            <select name="tiene_alumnos" id="tiene_alumnos" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none transition-all" required>
+              <option value="">Seleccioná opción</option>
+              <option value="si">Sí, tengo alumnos</option>
+              <option value="no">No, por ahora no</option>
+            </select>
+          </div>
+          <div id="cantidad-alumnos-container" class="hidden space-y-2">
+            <label class="text-sm font-bold text-gray-700 ml-1">¿Cuántos alumnos?</label>
+            <input type="number" name="cantidad_alumnos" id="cantidad_alumnos" min="2" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none transition-all" placeholder="Mínimo 2">
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-sm font-bold text-gray-700 ml-1">Link a tu Reel / Portfolio</label>
+          <input type="url" name="reel" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none transition-all" placeholder="https://youtube.com/..." required>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-sm font-bold text-gray-700 ml-1">Experiencia y Propuesta</label>
+          <textarea name="experiencia" rows="4" class="w-full rounded-2xl border-2 border-gray-100 bg-gray-50 px-4 py-3 text-gray-900 focus:border-[#C5A059] focus:outline-none transition-all" placeholder="Contanos tu trayectoria y qué clases te gustaría dar..." required></textarea>
+        </div>
+
+        <button type="submit" id="btn-submit" class="w-full bg-black text-white py-5 rounded-full font-bold uppercase tracking-widest hover:bg-[#C5A059] hover:shadow-[0_10px_25px_rgba(197,160,89,0.4)] transform hover:scale-[1.01] transition-all duration-300">
+          Enviar Postulación
+        </button>
+
+        <p id="form-feedback" class="text-center font-bold text-sm hidden p-4 rounded-xl"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="relative bg-black/90 backdrop-blur-md border-t border-white/10 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+    <div class="space-y-4">
+      <div class="text-xl font-bold tracking-tighter text-white uppercase">
+        Exclusive <span class="text-[#C5A059]">Dance</span> Studio
+      </div>
+      <p class="text-white/70 text-sm leading-relaxed">
+        Elevando el arte del movimiento con elegancia y profesionalismo. Tu lugar para brillar está aquí.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-[#F3E5AB] font-bold uppercase text-xs tracking-[0.2em] mb-6">Explorar</h4>
+      <ul class="space-y-3 text-sm text-white/80">
+        <li><a href="INDEX.HTML" class="hover:text-[#C5A059] transition">Inicio</a></li>
+        <li><a href="CLASES.HTML" class="hover:text-[#C5A059] transition">Clases</a></li>
+        <li><a href="STAFF.HTML" class="hover:text-[#C5A059] transition">Staff</a></li>
+        <li><a href="UNITE.HTML" class="hover:text-[#C5A059] transition">Trabaja con nosotros</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[#F3E5AB] font-bold uppercase text-xs tracking-[0.2em] mb-6">Contacto</h4>
+      <ul class="space-y-3 text-sm text-white/80">
+        <li>📍 Av. Boedo 1057, CABA</li>
+        <li>📞 +54 9 11 2584-0413</li>
+        <li>✉️ exclusive.dance.info@gmail.com</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[#F3E5AB] font-bold uppercase text-xs tracking-[0.2em] mb-6">Seguinos</h4>
+      <div class="flex justify-center md:justify-start gap-4">
+        <a href="https://www.instagram.com/dancingwithmiia/" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C5A059] hover:text-[#C5A059] transition text-[10px] font-bold">IG</a>
+        <a href="https://www.tiktok.com/@miaelshami" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C5A059] hover:text-[#C5A059] transition text-[10px] font-bold">TK</a>
+        <a href="https://www.youtube.com/@miaelshami" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#C5A059] hover:text-[#C5A059] transition text-[10px] font-bold">YT</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-center text-xs text-white/50 tracking-widest uppercase">
+    <p> © 2026 Sociedades360. Todos los derechos reservados. <br> Desarrollado por <em class="text-[#C5A059]">@desarrollo_by joaquin flores</em></p>
+  </div>
+</footer>           
+
+<script>
+  // 1. Inicializar EmailJS
+  (function(){ emailjs.init("UEYboTH87Edkw5v0W"); })();
+
+  // 2. Selectores
+  const form = document.getElementById('unite-form');
+  const btn = document.getElementById('btn-submit');
+  const feedback = document.getElementById('form-feedback');
+
+  const especialidadSelect = document.getElementById('especialidad');
+  const otraEspContainer = document.getElementById('otra-especialidad-container');
+  const otraEspInput = document.getElementById('otra_especialidad_detalle');
+
+  const tieneAlumnosSelect = document.getElementById('tiene_alumnos');
+  const alumnosContainer = document.getElementById('cantidad-alumnos-container');
+  const alumnosInput = document.getElementById('cantidad_alumnos');
+
+  // 3. Lógica Especialidad "Otra"
+  especialidadSelect.addEventListener('change', function() {
+    if (this.value === 'Otra') {
+      otraEspContainer.classList.remove('hidden');
+      otraEspInput.setAttribute('required', 'required');
+      otraEspInput.focus();
+    } else {
+      otraEspContainer.classList.add('hidden');
+      otraEspInput.removeAttribute('required');
+      otraEspInput.value = '';
+    }
+  });
+
+  // 4. Lógica "Cantidad Alumnos"
+  tieneAlumnosSelect.addEventListener('change', function() {
+    if (this.value === 'si') {
+      alumnosContainer.classList.remove('hidden');
+      alumnosInput.setAttribute('required', 'required');
+    } else {
+      alumnosContainer.classList.add('hidden');
+      alumnosInput.removeAttribute('required');
+      alumnosInput.value = '';
+    }
+  });
+
+  // 5. Envío de Formulario
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    btn.innerText = "PROCESANDO ENVÍO...";
+    btn.disabled = true;
+
+    // Filtro silencioso
+    if (tieneAlumnosSelect.value === "no") {
+      setTimeout(() => {
+        mostrarExito();
+      }, 2000);
+    } else {
+      // Registrar hora
+      document.getElementById('time_hidden').value = new Date().toLocaleString();
+
+      emailjs.sendForm('service_n7f5e21', 'template_62lyfho', this)
+        .then(() => {
+          mostrarExito();
+        }, (err) => {
+          feedback.innerText = "HUBO UN ERROR. POR FAVOR REINTENTÁ.";
+          feedback.className = "text-center font-bold text-sm text-red-600 bg-red-50 p-4 rounded-xl block";
+          feedback.classList.remove('hidden');
+          btn.disabled = false;
+          btn.innerText = "REINTENTAR ENVÍO";
+        });
+    }
+  });
+
+  function mostrarExito() {
+    feedback.innerText = "¡POSTULACIÓN ENVIADA CON ÉXITO! REVISAREMOS TU MATERIAL.";
+    feedback.className = "text-center font-bold text-sm text-emerald-600 bg-emerald-50 p-4 rounded-xl block";
+    feedback.classList.remove('hidden');
+    
+    btn.innerText = "¡ENVIADO!";
+    btn.classList.replace('bg-black', 'bg-emerald-500');
+    
+    form.reset();
+    otraEspContainer.classList.add('hidden');
+    alumnosContainer.classList.add('hidden');
+
+    setTimeout(() => {
+        feedback.classList.add('hidden');
+        btn.disabled = false;
+        btn.innerText = "ENVIAR POSTULACIÓN";
+        btn.classList.replace('bg-emerald-500', 'bg-black');
+    }, 6000);
+  }
+
+  // Menú Mobile
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.onclick = () => mobileMenu.classList.toggle('hidden');
+
+  // Animación al cargar
+  window.onload = () => {
+    document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+  };
+</script>
+
+</body>
+</html>
