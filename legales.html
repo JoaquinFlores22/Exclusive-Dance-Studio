@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legales | Exclusive Dance Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+    
+    body { 
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(200, 179, 155, 0.1);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #C8B39B, #F8EFE5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #C8B39B; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-black text-white antialiased">
+
+  <div class="fixed inset-0 z-[-1] opacity-30">
+    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#5D768B] blur-[120px]"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-[#C8B39B] blur-[120px]"></div>
+  </div>
+
+  <main class="max-w-3xl mx-auto py-24 px-8">
+    
+    <div class="flex justify-between items-center mb-16">
+      <a href="index.html" class="group flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-[#C8B39B] hover:text-white transition-all">
+        <span class="transform group-hover:-translate-x-1 transition-transform">←</span> Volver al Studio
+      </a>
+      <div class="h-[1px] w-12 bg-[#C8B39B]/30"></div>
+    </div>
+
+    <header class="mb-20 text-center md:text-left">
+      <span class="text-[#5D768B] text-[10px] font-black uppercase tracking-[0.5em] mb-4 block">Documentación Oficial</span>
+      <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-6">
+        Avisos <br> <span class="gradient-text">Legales</span>
+      </h1>
+      <p class="text-white/40 text-sm font-light max-w-md">Transparencia y profesionalismo en el manejo de tu información y tu experiencia en nuestras sedes.</p>
+    </header>
+
+    <div class="flex flex-wrap gap-4 mb-16">
+      <a href="#privacidad" class="px-6 py-3 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">Privacidad</a>
+      <a href="#terminos" class="px-6 py-3 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">Términos de Servicio</a>
+    </div>
+
+    <div class="space-y-20">
+      
+      <section id="privacidad" class="glass-card p-8 md:p-12 rounded-[2.5rem]">
+        <div class="flex items-center gap-4 mb-8">
+            <span class="w-8 h-8 rounded-full bg-[#5D768B]/20 flex items-center justify-center text-[#5D768B] font-bold text-xs">01</span>
+            <h2 class="text-2xl font-black uppercase tracking-tight">Política de Privacidad</h2>
+        </div>
+        <div class="space-y-6 text-white/60 text-sm leading-relaxed font-light">
+          <p>En <strong class="text-[#F8EFE5]">Exclusive Dance Studio</strong>, la protección de tus datos es una prioridad. Recolectamos información personal como nombre, email, teléfono y usuario de Instagram únicamente con fines de gestión académica y profesional.</p>
+          <p>Tus datos son almacenados de forma segura y nunca serán cedidos a terceros sin tu consentimiento explícito. Tienes derecho a solicitar el acceso, rectificación o eliminación de tus datos en cualquier momento escribiendo a nuestro canal oficial.</p>
+        </div>
+      </section>
+
+      <section id="terminos" class="glass-card p-8 md:p-12 rounded-[2.5rem]">
+        <div class="flex items-center gap-4 mb-8">
+            <span class="w-8 h-8 rounded-full bg-[#C8B39B]/20 flex items-center justify-center text-[#C8B39B] font-bold text-xs">02</span>
+            <h2 class="text-2xl font-black uppercase tracking-tight">Términos y Condiciones</h2>
+        </div>
+        <div class="space-y-8 text-white/60 text-sm leading-relaxed font-light">
+          
+          <div class="space-y-2">
+            <h3 class="text-[#C8B39B] font-bold uppercase text-[10px] tracking-widest">Inscripciones y Membresías</h3>
+            <p>El cupo a las clases se garantiza únicamente mediante el pago previo. Las cuotas son personales e intransferibles.</p>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="text-[#C8B39B] font-bold uppercase text-[10px] tracking-widest">Derechos de Imagen</h3>
+            <p>Al asistir a nuestras sedes, el alumno acepta que el material audiovisual capturado durante las clases (fotos/videos) pueda ser utilizado para la difusión artística del estudio en plataformas digitales.</p>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="text-[#C8B39B] font-bold uppercase text-[10px] tracking-widest">Salud y Seguridad</h3>
+            <p>La danza requiere esfuerzo físico. Es responsabilidad del alumno informar sobre lesiones previas. El estudio no se responsabiliza por incidentes derivados de una práctica negligente o falta de apto médico.</p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="mt-32 text-center">
+      <div class="h-[1px] w-full bg-white/5 mb-8"></div>
+      <p class="text-[9px] text-white/20 uppercase tracking-[0.4em]">Última actualización: Marzo 2026</p>
+    </footer>
+
+  </main>
+</body>
+</html>
